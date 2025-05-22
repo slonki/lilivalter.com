@@ -1,3 +1,4 @@
 test*
 dev*
 .env*
+.DS_Store
