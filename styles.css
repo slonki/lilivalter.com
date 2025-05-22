@@ -41,3 +41,20 @@ body {
     text-decoration: underline;
   }
   
+  .portfolio-list {
+    margin-top: 30px;
+}
+
+.project {
+    margin-bottom: 15px;
+}
+
+.project a {
+    color: #171717;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}

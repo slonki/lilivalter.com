@@ -1,0 +1,361 @@
+/* Use Roboto as default font */
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #ebe1f4; /* fallback */
+  background-image: url('../images/Background.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.welcome-section {
+  height: 1200px
+}
+
+.background-section {
+  height: 800px
+}
+
+.research-section {
+  height: 1600px
+}
+
+.insights-section {
+  height: 1800px
+}
+
+.design-section {
+  height: 1000px
+}
+
+.ingredients-section {
+  height: 1500px
+}
+
+.solution-section {
+  height: 1000px
+}
+
+/* Customize the "Why?" circle tag a bit */
+.tag.is-primary.is-large {
+  background-color: #8E75A6 !important;
+  border-radius: 50% !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* You can add custom shadows if you want */
+.box {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card {
+  background: transparent;
+  width: 230px;   /* smaller width to fit 4 cards */
+  height: 300px;
+  perspective: 1000px;
+  box-shadow: none;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  box-shadow: inset 0 0 0 1px #ddd;
+}
+
+.card-front h2 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #e1d7ef;
+}
+
+.research-summary {
+  max-width: 700px;
+  margin: 2rem auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  position: relative;
+  /* Remove flex-wrap: wrap; */
+}
+
+/* Vertical offsets */
+.card1 {
+  margin-top: 0;
+}
+
+.card2 {
+  margin-top: 40px;
+}
+
+.card3 {
+  margin-top: -20px;
+}
+
+.card4 {
+  margin-top: 30px;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.columns .column img.floaty-img {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+.columns .column:nth-child(1) img {
+  animation-delay: 0s;
+}
+
+.columns .column:nth-child(2) img {
+  animation-delay: 1.3s;
+}
+
+.columns .column:nth-child(3) img {
+  animation-delay: 2.6s;
+}
+
+.carousel-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  cursor: grab;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.carousel-item {
+  display: inline-block;
+  width: 23%; /* about 4 items per view with small margin */
+  margin-right: 1.5%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Auto-scroll animation */
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollCarousel 20s linear infinite;
+}
+/* Pause animation on hover */
+.carousel-container:hover .carousel-inner {
+  animation-play-state: paused;
+  cursor: grabbing;
+}
+
+.vertical-divider {
+  width: 1px;
+  background-color: #ddd;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.columns > .vertical-divider:nth-of-type(2) {
+  left: 33.33%;
+}
+
+.columns > .vertical-divider:nth-of-type(4) {
+  left: 66.66%;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8E75A6; /* Your lavender/purple */
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Parallax floating left text */
+.parallax-text-left {
+  position: absolute;
+  top: 20px;
+  left: -300px;
+  width: 250px;
+  font-size: 1rem;
+  animation: floatLeft 6s ease-in-out infinite;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Parallax floating right icon */
+.parallax-icon-right {
+  position: absolute;
+  right: -120px;
+  bottom: 120px;
+  animation: floatRight 5s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floaty {
+  animation: float 4s ease-in-out infinite;
+}
+
+.circle-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* space between the two side-by-side circles */
+  margin-bottom: 1rem;
+}
+
+.offset-circle {
+  margin-left: 25px; /* offset horizontally to the right */
+  margin-top: -10px; /* slight overlap upward if desired */
+}
+
+/* Keep previous styles for .circle, sizes, float animations */
+
+.circle {
+  background-color: #8E75A6;
+  color: white;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(162, 107, 246, 0.3);
+}
+
+.size-sm {
+  width: 60px;
+  height: 60px;
+  font-size: 0.75rem;
+}
+
+.size-md {
+  width: 80px;
+  height: 80px;
+  font-size: 0.85rem;
+}
+
+.size-lg {
+  width: 100px;
+  height: 100px;
+  font-size: 1rem;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.floaty-purple {
+  animation: float 4s ease-in-out infinite;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 1s;
+}
+
+.bubble-vertical-divider {
+  width: 2px;
+  background-color: #ebe1f4; /* purple color matching your circles */
+  height: 150px; /* adjust height as needed */
+  align-self: center;
+  margin: 0 1.5rem; /* space around divider */
+}
+
+.iphone-style-img {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  width: 30%;
+}
+
+.iphone-style-img.offset-top {
+  margin-top: 5%;
+}
+
+.iphone-style-img.offset-top-2x {
+  margin-top: 10%;
+}
