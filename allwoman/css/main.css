@@ -31,7 +31,7 @@ body {
 }
 
 .ingredients-section {
-  height: 1500px
+  height: 1600px
 }
 
 .solution-section {
@@ -358,4 +358,24 @@ body {
 
 .iphone-style-img.offset-top-2x {
   margin-top: 10%;
+}
+
+.color-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle-swatch {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.circle-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
 }
