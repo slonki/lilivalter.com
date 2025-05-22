@@ -35,6 +35,10 @@ body {
 }
 
 .solution-section {
+  height: 1500px
+}
+
+.thankyou-section {
   height: 1000px
 }
 
